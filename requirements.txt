@@ -1,0 +1,14 @@
+mss>=10.1,<11
+opencv-python-headless>=4.12,<5
+numpy>=2.4,<3
+pyautogui>=0.9.54,<0.10
+pydirectinput>=1.0.4,<2
+pynput>=1.8,<2
+pygetwindow>=0.0.9,<0.1
+pydantic>=2.12,<3
+pydantic-settings>=2.12,<3
+PyYAML>=6.0,<7
+rich>=14.2,<15
+imageio-ffmpeg>=0.6,<0.7
+pytest>=9.0,<10
+pyinstaller>=6.17,<7

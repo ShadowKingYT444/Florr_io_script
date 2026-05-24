@@ -1,0 +1,93 @@
+screen:
+  monitor_index: 1
+  game_window_title_contains: "florr"
+  auto_focus_window: true
+  maximize_window: true
+  auto_detect_minimap: true
+  minimap_roi: [20, 20, 300, 300]
+  minimap_search_roi:
+  world_roi: [0, 0, 1920, 1080]
+  background_sample_rois:
+    - [420, 220, 120, 120]
+    - [1380, 220, 120, 120]
+    - [420, 780, 120, 120]
+    - [1380, 780, 120, 120]
+
+runtime:
+  tick_hz: 20
+  dry_run: true
+  debug_dir: "assets/debug"
+  save_debug_frames: true
+  debug_frame_interval_seconds: 5.0
+  emergency_stop_key: "f12"
+  pause_key: "f11"
+
+hotkeys:
+  speed: "9"
+  battle: "4"
+  magnet: "5"
+
+movement:
+  up: "w"
+  down: "s"
+  left: "a"
+  right: "d"
+  pulse_seconds: 0.08
+  waypoint_radius_px: 8
+  max_movement_keys: 2
+
+timers:
+  forced_death_seconds: 10800
+  death_wait_seconds: 1800
+  dimension_confirm_frames: 10
+  popup_confirm_frames: 4
+  drop_confirm_frames: 5
+
+vision:
+  masks:
+    walkable_hsv_min: [0, 0, 180]
+    walkable_hsv_max: [179, 80, 255]
+    brown_background_hsv_min: [5, 35, 20]
+    brown_background_hsv_max: [35, 255, 190]
+    target_hsv_min: [35, 50, 60]
+    target_hsv_max: [95, 255, 255]
+    drop_hsv_min: [15, 30, 120]
+    drop_hsv_max: [100, 255, 255]
+    red_ball_hsv_min_1: [0, 80, 80]
+    red_ball_hsv_max_1: [10, 255, 255]
+    red_ball_hsv_min_2: [170, 80, 80]
+    red_ball_hsv_max_2: [179, 255, 255]
+    grey_path_hsv_min: [0, 0, 70]
+    grey_path_hsv_max: [179, 70, 210]
+    task_green_hsv_min: [40, 45, 35]
+    task_green_hsv_max: [100, 255, 180]
+  navigation:
+    grid_stride_px: 3
+    path_simplify_px: 8
+    hint_reference_size_px: 300
+    first_target_hint: [170, 235]
+    second_target_hint: [75, 32]
+    player_hsv_min: [15, 60, 80]
+    player_hsv_max: [38, 255, 255]
+    fallback_direct_movement: true
+    fallback_arrival_seconds: 8.0
+  combat:
+    enabled: true
+    click_interval_seconds: 0.08
+    threat_radius_px: 185
+    attack_radius_px: 430
+    kite_radius_px: 250
+    mob_min_area_px: 40
+    mob_max_area_px: 25000
+    hold_mouse_attack: true
+    zoom_out_scrolls: 3
+  drops:
+    density_enter: 35
+    density_exit: 12
+    min_blob_area_px: 4
+    max_blob_area_px: 650
+  ball_task:
+    min_ball_area_px: 40
+    min_path_area_px: 300
+    drag_step_px: 10
+    drag_duration_seconds: 2.5
