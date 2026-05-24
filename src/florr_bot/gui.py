@@ -11,13 +11,13 @@ from tkinter import filedialog, messagebox, ttk
 import cv2
 import yaml
 
-from .capture import ScreenCapture
-from .config import BotConfig, load_config
-from .input_control import InputController
-from .logging_utils import configure_logging
-from .main import resolve_resource_path
-from .screen_analysis import detect_minimap_roi, draw_roi
-from .state_machine import FlorrBot
+from florr_bot.capture import ScreenCapture
+from florr_bot.config import BotConfig, load_config
+from florr_bot.input_control import InputController
+from florr_bot.logging_utils import configure_logging
+from florr_bot.main import resolve_resource_path
+from florr_bot.screen_analysis import detect_minimap_roi, draw_roi
+from florr_bot.state_machine import FlorrBot
 
 
 class TkLogHandler(logging.Handler):

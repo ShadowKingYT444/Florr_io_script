@@ -2,6 +2,10 @@ $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
 
+Get-Process |
+    Where-Object { $_.ProcessName -in @("FlorrBot", "florr-bot") } |
+    Stop-Process -Force
+
 New-Item -ItemType Directory -Force -Path "release" | Out-Null
 
 Write-Host "Building one-file GUI executable..."
