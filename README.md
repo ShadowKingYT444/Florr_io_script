@@ -15,12 +15,33 @@ python -m pip install -r requirements.txt
 
 ## Run
 
-Build/open the GUI:
+For direct double-click use, build the release:
+
+```powershell
+.\scripts\build_release.ps1
+```
+
+This creates:
+
+- `release\FlorrBot.exe`: one-file app you can double-click directly.
+- `release\FlorrBot-Portable.zip`: portable folder build.
+- `release\install_florr_bot.bat`: installer shortcut that copies the app to `%LOCALAPPDATA%\Programs\FlorrBot` and creates shortcuts.
+- `release\install_florr_bot.ps1`: PowerShell version of the installer.
+
+Install locally:
+
+```powershell
+.\release\install_florr_bot.bat
+```
+
+Build/open the development GUI:
 
 ```powershell
 .\scripts\build_exe.ps1
 .\dist\florr-bot\florr-bot.exe
 ```
+
+Do not run anything from `build\`; that folder is PyInstaller's temporary work area and can fail with missing Python DLL errors.
 
 In the GUI:
 
